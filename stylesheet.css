@@ -31,6 +31,9 @@ a:hover{
 .hero{
   display:grid;
   grid-template-columns:250px 1fr;
+  grid-template-areas:
+    "profile name"
+    "profile intro";
   column-gap:46px;
   row-gap:10px;
   align-items:start;
@@ -38,8 +41,7 @@ a:hover{
 }
 
 .name-title{
-  grid-column:2;
-  grid-row:1;
+  grid-area:name;
   margin:0 0 4px;
   padding:0;
   text-align:center;
@@ -50,15 +52,13 @@ a:hover{
 }
 
 .profile{
-  grid-column:1;
-  grid-row:1/span2;
+  grid-area:profile;
   align-self:center;
   text-align:center;
 }
 
 .intro{
-  grid-column:2;
-  grid-row:2;
+  grid-area:intro;
 }
 
 .avatar,.avatar-placeholder{
@@ -270,24 +270,23 @@ footer p{
 
   .hero{
     grid-template-columns:1fr;
+    grid-template-areas:
+      "name"
+      "profile"
+      "intro";
     gap:16px
   }
 
   .name-title{
-    grid-column:1;
-    grid-row:1;
     text-align:center;
     margin-bottom:0;
   }
 
   .profile{
-    grid-column:1;
-    grid-row:2;
+    align-self:center;
   }
 
   .intro{
-    grid-column:1;
-    grid-row:3;
   }
 
   .pub,.pub.compact{
