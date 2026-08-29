@@ -250,6 +250,34 @@ h3{
   color:var(--muted)
 }
 
+
+/* ===================== EDUCATION ===================== */
+
+.education-item{
+  display:grid;
+  grid-template-columns:120px 1fr;
+  gap:24px;
+  align-items:center;
+}
+
+.education-image img{
+  width:120px;
+  height:120px;
+  object-fit:contain;
+  display:block;
+}
+
+.education-info h3{
+  margin:0 0 6px;
+  font-size:17px;
+  font-weight:600;
+}
+
+.education-info p{
+  margin:3px 0;
+}
+
+
 footer{
   border-top:1px solid var(--line);
   margin-top:42px;
@@ -287,6 +315,16 @@ footer p{
   }
 
   .intro{
+  }
+
+  .education-item{
+    grid-template-columns:90px 1fr;
+    gap:16px;
+  }
+
+  .education-image img{
+    width:90px;
+    height:90px;
   }
 
   .pub,.pub.compact{
